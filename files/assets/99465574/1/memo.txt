@@ -1,0 +1,50 @@
+
+    // イベントリスナーを登録する
+    this.app.on('imachange', this.imachan, this);
+
+    // このEntityが破棄された時にリスナーの登録を解除する(やらないとメモリリークを起こす)
+    this.on('destroy', function() {
+        this.app.off('imachange', this.imachan, this);
+    });
+
+            this.app.on('imachange', function() {
+    //オリジナルのテクスチャアセットからフレーム情報を代入
+    newAtlas.frames = this.app.assets.find('thad.atlas').frames;
+//変更したいテクスチャデータをアトラスのテクスチャに設定
+    newAtlas.texture = this.app.assets.find('thad.png').resource;
+        //新規作成したテクスチャアトラスアセットに差し替え
+    this.entity.sprite._currentClip._sprite = newAtlas;
+    });
+
+    //オリジナルのテクスチャアセットからフレーム情報を代入
+newAtlas.frames = [0];
+//変更したいテクスチャデータをアトラスのテクスチャに設定
+newAtlas.texture = this.app.assets.find('thad.png').resource;
+
+
+///
+
+Movement.prototype.imachan = function(){
+    
+
+
+
+console.log(this.entity.sprite._currentClip._sprite);//コンソールにhitと表示
+console.log(newAtlas);//コンソールにhitと表示
+};
+
+///
+
+CreateSpriteAtRuntime.prototype.imachan = function(){
+  
+var logScript  = this.logEntity.findComponent('script');
+
+this.playerimage = logScript.script.purl;
+
+console.log(logScript.script.purl);//コンソールにhitと表示
+};
+
+
+curl -H "Origin: playcanvas.com" -v "https://launch.playcanvas.com/1386148?debug=true"
+
+fastify.register(require('fastify-cors'), {origin: ["https://glitch.com", /localhost\:8080/, "https://playcanvas.com"]});

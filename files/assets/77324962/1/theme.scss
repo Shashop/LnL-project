@@ -1,0 +1,418 @@
+
+    @media screen and (max-width:767px){
+       
+        #main-header {      text-align: center; 
+  width: 750px;}
+  img.image2{
+    width:0% ;
+    height:0% ;
+   }
+
+  }
+  
+  body{
+      margin:0; 
+              background-image: url("~assets/img/haikei/hiru.png");     /* 背景画像指定 */
+      background-repeat: repeat; 
+      background-attachment: fixed;
+  background-position: right bottom;
+  
+  height: 100%;
+  margin: 0px auto;
+  text-align: center;
+
+  text-decoration: none;
+ 
+
+
+                 /* 背景の繰り返し設定 */
+  }
+
+  p {
+    display: block;
+    
+    margin-block-end: 0%;
+    
+    margin-inline-end: 0%;
+}
+.siro{
+  color:blanchedalmond
+}
+.midasi{
+  color: blanchedalmond;
+  font-size:20px;
+  font-weight: 600;
+}
+  h4 {
+    display: block;
+    margin-block-start: 1.33em;
+    margin-block-end: 0px;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: 500;
+
+       
+
+     
+}
+.dote{
+  object-fit: cover;
+  width: 64px;
+  height: 64px;
+}
+img.dote{vertical-align: middle;
+  filter: drop-shadow(2px 2px 3px rgba(255, 255, 255, 0.185));}
+  img.emoji {
+    height: 25px;
+    width: 25px;
+    margin: 0 .05em 0 .1em;
+    vertical-align: -0.1em;
+    filter: drop-shadow(2px 2px 5px rgb(0, 0, 0));
+ }
+  body.int{
+    margin:0; 
+    background-attachment: scroll;
+background-color: #36302d;
+background-image: url("~assets/img/haikei/purty-wood.png");
+/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+}
+a:-webkit-any-link {
+  color: -webkit-link;
+  cursor: pointer;
+  text-decoration: none;
+}
+ul {
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+}
+
+  @supports(-webkit-appearance: none) or (-moz-appearance: none) {
+    input[type='checkbox']
+    /*input[type='radio']*/ {
+      --active: #61161c;
+      --active-inner: #fff;
+      --focus: 2px rgba(97, 19, 23, 0.3);
+      --border: #BBC1E1;
+      --border-hover: #61161c;
+      --background: #fff;
+      --disabled: #F6F8FF;
+      --disabled-inner: #E1E6F9;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      height: 21px;
+      outline: none;
+      display: inline-block;
+      vertical-align: top;
+      position: relative;
+      margin: 0;
+      cursor: pointer;
+      border: 1px solid var(--bc, var(--border));
+      background: var(--b, var(--background));
+      transition: background .3s, border-color .3s, box-shadow .2s;
+      &:after {
+        content: '';
+        display: block;
+        left: 0;
+        top: 0;
+        position: absolute;
+        transition: transform var(--d-t, .3s) var(--d-t-e, ease), opacity var(--d-o, .2s);
+      }
+      &:checked {
+        --b: var(--active);
+        --bc: var(--active);
+        --d-o: .3s;
+        --d-t: .6s;
+        --d-t-e: cubic-bezier(.2, .85, .32, 1.2);
+      }
+      &:disabled {
+        --b: var(--disabled);
+        cursor: not-allowed;
+        opacity: .9;
+        &:checked {
+          --b: var(--disabled-inner);
+          --bc: var(--border);
+        }
+        & + label {
+          cursor: not-allowed;
+        }
+      }
+      &:hover {
+        &:not(:checked) {
+          &:not(:disabled) {
+            --bc: var(--border-hover);
+          }
+        }
+      }
+      &:focus {
+        box-shadow: 0 0 0 var(--focus);
+      }
+      &:not(.switch) {
+        width: 21px;
+        &:after {
+          opacity: var(--o, 0);
+        }
+        &:checked {
+          --o: 1;
+        }
+      }
+      & + label {
+        font-size: 14px;
+        line-height: 21px;
+        display: inline-block;
+        vertical-align: top;
+        cursor: pointer;
+        margin-left: 4px;
+      }
+    }
+    input[type='checkbox'] {
+      &:not(.switch) {
+        border-radius: 7px;
+        &:after {
+          width: 5px;
+          height: 9px;
+          border: 2px solid var(--active-inner);
+          border-top: 0;
+          border-left: 0;
+          left: 7px;
+          top: 4px;
+          transform: rotate(var(--r, 20deg));
+        }
+        &:checked {
+          --r: 43deg;
+        }
+      }
+      &.switch {
+        width: 38px;
+        border-radius: 11px;
+        &:after {
+          left: 2px;
+          top: 2px;
+          border-radius: 50%;
+          width: 15px;
+          height: 15px;
+          background: var(--ab, var(--border));
+          transform: translateX(var(--x, 0));
+        }
+        &:checked {
+          --ab: var(--active-inner);
+          --x: 17px;
+        }
+        &:disabled {
+          &:not(:checked) {
+            &:after {
+              opacity: .6;
+            }
+          }
+        }
+      }
+    }
+  /* input[type='radio'] {
+      border-radius: 50%;
+      &:after {
+        width: 19px;
+        height: 19px;
+        border-radius: 50%;
+        background: var(--active-inner);
+        opacity: 0;
+        transform: scale(var(--s, .7));
+      }
+      &:checked {
+        --s: .5;
+      }
+    }*/
+  }
+
+ 
+  
+  .coin{position: relative; /* 通常の文章の流れにある要素なので relative が適切 */
+    top: 2px;}
+
+    .form {
+        margin: 10px 0 0 0px;
+        &-title {
+        font-weight: bold;
+        
+
+}
+
+&-input {
+margin: 8px 0;
+width: 300px;
+}
+&-input-long {
+margin: 8px 0;
+width: 600px;
+}
+&-textarea {
+margin: 8px 0;
+width: 600px;
+height: 200px;
+resize: none;
+}
+}
+.button-wrapper {
+  width: 100%;
+
+  justify-content: flex-end;
+}
+.trunksage{position: relative; /* 通常の文章の流れにある要素なので relative が適切 */
+    top: 5px;
+      
+  }
+  .small {
+    font-size: 66%;
+    }
+    .large {
+    font-size: 150%;
+    }
+    .bold {
+    font-weight: bold;
+    }
+.button{  
+    padding: 6px;
+    font-weight: bold;
+    color: #e0dbac ;
+    border: solid 2px #e0dbac;
+    cursor :pointer;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;/* for Safari and Chrome 対応*/
+    -moz-border-radius: 10px;/* for Firefox 対応*/
+    background: #433732;
+    font-size: 14px; 
+    position: relative;
+    z-index: 20;
+    transition: .3s;
+
+        
+}
+.zenshin{    padding: 6px;
+  font-weight: bold;
+  color: #f2f1e6 ;
+  border: solid 2px #f2f1e6;
+  cursor :pointer;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;/* for Safari and Chrome 対応*/
+  -moz-border-radius: 50px;/* for Firefox 対応*/
+  background: #000;
+  transition: .3s;
+  text-decoration: none;
+  font-size: 14px; }
+/*全体*/
+.hidden_box {
+  margin: 1.5em auto;/*前後の余白*/
+  padding: 0;
+}
+
+/*ボタン装飾*/
+.hidden_box label {
+
+  padding: 12px;
+  font-weight: bold;
+  color: #f2f1e6 ;
+  border: solid 2px #f2f1e6;
+  cursor :pointer;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;/* for Safari and Chrome 対応*/
+  -moz-border-radius: 50px;/* for Firefox 対応*/
+  background: #000;
+  font-size: 12px; 
+  transition: .3s;
+  text-shadow: none;
+}
+
+/*ボタンホバー時*/
+.hidden_box label:hover {
+  background: #efefef;
+}
+
+input.hoge{
+  display: none;
+}
+/*チェックは見えなくする*/
+
+
+/*中身を非表示にしておく*/
+.hidden_box .hidden_show {
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: 0.8s;
+}
+
+/*クリックで中身表示*/
+.hidden_box input:checked ~ .hidden_show {
+  padding: 10px 0;
+  height: auto;
+  opacity: 1;
+  
+  
+  
+}
+.inline-block_1 {
+   display: inline-block; 
+    /* インラインブロック要素にする */
+    /* 背景色指定 */
+  padding:  100px 70px;             /* 余白指定 */
+  height: 400px;
+ 
+
+               /* 高さ指定 */
+  width: 510px;
+  text-align: left;
+  
+  vertical-align: top;
+  
+    background-image:
+     url("~assets/img/haikei/techo.png");
+
+
+background-repeat:
+
+    no-repeat;
+
+background-position:
+    -0% 0%;
+  
+  background-attachment:
+
+      scroll;
+  
+  vertical-align: middle;
+
+  color:black;
+      white-space: nowrap;
+}
+.inbl1{
+  display: inline-block; 
+  width: 250px;
+  height: 400px;
+    overflow: hidden;
+    font-size: 14px; 
+ white-space: normal;
+
+}
+
+/*ボタンホバー時*/
+.button:hover {
+    background: #b7a547;
+}
+@import url('https://fonts.googleapis.com/css?family=Coda+Caption:800|Kosugi|Sawarabi+Mincho&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap');
+@import url('https://fonts.googleapis.com/css?family=M+PLUS+1p|Noto+Serif+JP|Sawarabi+Gothic&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Work+Sans&display=swap');
+@import url('https://use.fontawesome.com/releases/v5.6.1/css/all.css');
+@import url('https://fonts.googleapis.com/css?family=Trade+Winds&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lobster+Two&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Coda+Caption:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bigshot+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap');

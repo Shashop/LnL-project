@@ -1,0 +1,20 @@
+<template id="main">
+  <v-ons-page style="width: 500px; height: 500px; position: absolute;">
+    <v-ons-toolbar>
+      <div class="center">{{ title }}</div>
+      <div class="right">
+        <v-ons-toolbar-button>
+          <v-ons-icon icon="ion-navicon, material: md-menu"></v-ons-icon>
+        </v-ons-toolbar-button>
+      </div>
+    </v-ons-toolbar>
+
+    <p style="text-align: center">
+      <v-ons-button @click="$ons.notification.alert('Hello World!')">
+        Click me!
+      </v-ons-button>
+    </p>
+  </v-ons-page>
+</template>
+
+<div id="app"></div>
